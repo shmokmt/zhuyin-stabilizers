@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhuyin-Stabilizers</title>
+<style>
+  @font-face {
+    font-family: 'bopomofo';
+    src: url('bpmfont.ttf') format('truetype');
+  }
+
+  #output {
+    font-family: 'bopomofo', sans-serif;
+    margin-top: 20px;
+    white-space: pre-wrap;
+  }
+
+  body {
+	font-size: 16px;
+  }
+
+  div {
+	font-size: 1.6em;
+  }
+</style>
+<script>
+  function displayText() {
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+    output.textContent = input.value;
+  }
+</script>
+</head>
+<body>
+  <h1>Enter Text:</h1>
+  <textarea id="input" rows="4" cols="50" oninput="displayText()"></textarea>
+  <h1>Display Result:</h1>
+  <div id="output"></div>
+</body>
+</html>
