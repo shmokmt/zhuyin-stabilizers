@@ -30,6 +30,11 @@
     const output = document.getElementById('output');
     output.textContent = input.value;
   }
+
+  function setFontSize(size) {
+    const output = document.getElementById('output');
+    output.style.fontSize = size;
+  }
 </script>
 </head>
 <body>
@@ -37,5 +42,9 @@
   <textarea id="input" rows="4" cols="50" oninput="displayText()"></textarea>
   <h1>Display Result:</h1>
   <div id="output"></div>
+  <h2>Display Size</h2>
+  <button onclick="setFontSize('2em')">Large</button>
+  <button onclick="setFontSize('1.4em')">Medium</button>
+  <button onclick="setFontSize('1em')">Small</button>
 </body>
 </html>
